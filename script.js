@@ -1,21 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Preload all images
     preloadImages(imageUrls, function () {
         console.log("All images have been preloaded");
 
-        // Get the play button and audio player
         var playButton = document.getElementById('playButton');
         var audioPlayer = document.getElementById('audioPlayer');
 
-        // Add click event listener to the play button
         playButton.addEventListener('click', function () {
-            // Check if audio is currently paused
             if (audioPlayer.paused) {
-                // If paused, play the audio
                 audioPlayer.play();
-                playButton.style.display = 'none'; // Hide the play button
+                playButton.style.display = 'none';
 
-                // Start cycling through images and play video
                 replaceImage(0);
                 playVideo();
             }
@@ -36,8 +30,6 @@ function preloadImages(urls, callback) {
         img.src = url;
     });
 }
-
-
 
 const imageUrls = [
     "ironbowl/1.png",
@@ -201,12 +193,12 @@ function replaceImage(index) {
         img.src = imageUrls[index];
         const duration = imageDurations[index];
         setTimeout(() => {
-            replaceImage(index + 1); // Move to the next image after the specified duration
+            replaceImage(index + 1);
         }, duration);
     } else {
-        img.style.display = 'none'; // Hide image when cycling is done
-        hideImage(); // Call the function to hide the image after cycling completes
-        playVideo(); // Play video after image cycling completes
+        img.style.display = 'none';
+        hideImage();
+        playVideo();
     }
 }
 

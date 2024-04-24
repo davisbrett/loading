@@ -107,19 +107,16 @@ img {
 
 @keyframes ticker-animation {
     0% {
-        /* Start from the center */
         transform: translateX(100%);
     }
 
     100% {
-        /* Scroll to the left */
         transform: translateX(-2320%);
     }
 }
 
 .ticker-item {
     padding: 0 10px;
-    /* Adjust padding as needed */
     font-size: 18px;
     color: #dfdfdf;
     font-size: 1.5vw;
@@ -137,13 +134,11 @@ img {
     height: 0px;
     background-color: #c81c1f00;
     border-radius: 50%;
-    /* Make it round */
     box-shadow: 0 0 1.6666vw 1.6666vw rgba(179, 38, 38, 0.0),
         0 0 3.3333vw 3.3333vw rgba(179, 38, 38, 0.2),
         0 0 5vw 5vw rgba(179, 38, 38, 0.15),
         0 0 6.6667vw 6.6667vw rgba(179, 38, 38, 0.1),
         0 0 8.3333vw 8.3333vw rgba(179, 38, 38, 0.05);
-    /* Box shadow with diffused effect */
     margin: 50px auto;
     z-index: -1;
 }
@@ -170,9 +165,7 @@ img {
     padding-top: 9%;
     padding-bottom: 9%;
     display: block;
-    /* Make the anchor tag a block-level element */
     text-decoration: none;
-    /* Remove underline from links */
 }
 
 .headline:hover {
@@ -182,12 +175,10 @@ img {
 
 .headline:hover h1 {
     color: #ffffff;
-    /* Change color of headline text on hover */
 }
 
 .headline:hover .borderBottom {
     border-bottom-color: #ffffff;
-    /* Change border color on hover */
 }
 
 .borderBottom {
@@ -196,9 +187,7 @@ img {
 
 h1 {
     margin: 0;
-    /* Remove default margins from heading */
 }
-
 
 .borderBottom {
     border-bottom: .2em solid #aaaaaa;
