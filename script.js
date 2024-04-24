@@ -21,20 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-function preloadImages(urls, callback) {
-    var loaded = 0;
-    urls.forEach(function (url) {
-        var img = new Image();
-        img.onload = function () {
-            loaded++;
-            if (loaded === urls.length) {
-                callback();
-            }
-        };
-        img.src = url;
-    });
-}
-
 function hideLoader() {
     var loader = document.getElementById('loader');
     loader.style.display = 'none';
