@@ -65,6 +65,8 @@ img {
     position: fixed;
     bottom: 0%;
     z-index: 99;
+    display: flex;
+    align-items: center;
 }
 
 .directions {
@@ -82,6 +84,8 @@ img {
     color: #d2d2d2;
     padding-left: .5vw;
     z-index: 99;
+    display: flex;
+    align-items: center;
 }
 
 /* Ticker */
@@ -94,7 +98,6 @@ img {
     width: 74%;
     position: fixed;
     height: 4%;
-    position: fixed;
     bottom: 1%;
     left: 25.5%;
 }
@@ -125,6 +128,8 @@ img {
     font-style: normal;
     font-weight: 400;
     letter-spacing: 1.1;
+    display: flex;
+    align-items: center;
 }
 
 .glow {
@@ -290,17 +295,17 @@ p {
 }
 
 .loader {
-    color: #ff0000;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    margin: 0 0 2em;
-    height: 100px;
-    display: inline-block;
-    vertical-align: top;
-    position: fixed;
-    top: 28%;
-    left: 0%;
+    width: 6vw;
+    height: 6vw;
     z-index: 999;
-    display: none;
+    position: fixed;
+    top: 47%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+.loader.show {
+    opacity: 1;
 }
