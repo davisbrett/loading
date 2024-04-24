@@ -1,0 +1,317 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: fadeInOut linear infinite;
+}
+
+.nav {
+    display: flex;
+    position: fixed;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%);
+    gap: 1vw;
+    z-index: 3;
+}
+
+.navImage {
+    width: 100px;
+    height: auto;
+    opacity: 50%;
+}
+
+.sportscenter {
+    background-color: #080806;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.SC {
+    position: fixed;
+    top: 2%;
+}
+
+.ESPN {
+    width: 10vw;
+    position: fixed;
+    bottom: -.8%;
+    left: 2.5%;
+    z-index: 99;
+}
+
+.horizontal {
+    background-color: #181818;
+    width: 100%;
+    height: 6%;
+    position: fixed;
+    bottom: 0%;
+    z-index: 99;
+}
+
+.directions {
+    background-color: #393939;
+    width: 10%;
+    height: 4%;
+    position: fixed;
+    bottom: 1%;
+    left: 15%;
+    font-size: 1.5vw;
+    line-height: 2.4vw;
+    font-family: 'FreeSans', sans-serif;
+    font-weight: 600;
+    letter-spacing: .05vw;
+    color: #d2d2d2;
+    padding-left: .5vw;
+    z-index: 99;
+}
+
+/* Ticker */
+.ticker-container {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99;
+    background-color: #000000;
+    width: 74%;
+    position: fixed;
+    height: 4%;
+    position: fixed;
+    bottom: 1%;
+    left: 25.5%;
+}
+
+.ticker {
+    white-space: nowrap;
+    transform: translateX(50%);
+    animation: ticker-animation 180s linear infinite;
+}
+
+@keyframes ticker-animation {
+    0% {
+        /* Start from the center */
+        transform: translateX(100%);
+    }
+
+    100% {
+        /* Scroll to the left */
+        transform: translateX(-2320%);
+    }
+}
+
+.ticker-item {
+    padding: 0 10px;
+    /* Adjust padding as needed */
+    font-size: 18px;
+    color: #dfdfdf;
+    font-size: 1.5vw;
+    line-height: 2.4vw;
+    font-family: 'FreeSans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.1;
+}
+
+.glow {
+    position: fixed;
+    top: 3.2%;
+    width: 0px;
+    height: 0px;
+    background-color: #c81c1f00;
+    border-radius: 50%;
+    /* Make it round */
+    box-shadow: 0 0 1.6666vw 1.6666vw rgba(179, 38, 38, 0.0),
+        0 0 3.3333vw 3.3333vw rgba(179, 38, 38, 0.2),
+        0 0 5vw 5vw rgba(179, 38, 38, 0.15),
+        0 0 6.6667vw 6.6667vw rgba(179, 38, 38, 0.1),
+        0 0 8.3333vw 8.3333vw rgba(179, 38, 38, 0.05);
+    /* Box shadow with diffused effect */
+    margin: 50px auto;
+    z-index: -1;
+}
+
+.headlines {
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 28%;
+    left: 0%;
+}
+
+.headline {
+    font-size: .7vw;
+    line-height: 1.7vw;
+    font-family: 'FreeSans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1.1;
+    border-top: .16em solid #aaaaaa;
+    color: #aaaaaa;
+    width: 13vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    display: block;
+    /* Make the anchor tag a block-level element */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.headline:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.headline:hover h1 {
+    color: #ffffff;
+    /* Change color of headline text on hover */
+}
+
+.headline:hover .borderBottom {
+    border-bottom-color: #ffffff;
+    /* Change border color on hover */
+}
+
+.borderBottom {
+    border-bottom: .16em solid #aaaaaa;
+}
+
+h1 {
+    margin: 0;
+    /* Remove default margins from heading */
+}
+
+
+.borderBottom {
+    border-bottom: .2em solid #aaaaaa;
+}
+
+.upnext {
+    font-size: 1.2vw;
+    line-height: 2.4vw;
+    font-family: 'TT Octosquares Trl Cnd', sans-serif;
+    color: rgb(255, 255, 255);
+    width: 13vw;
+    position: fixed;
+    top: 18%;
+    left: 0;
+    padding-left: 1%;
+}
+
+.comingUp {
+    color: #ffffff;
+    font-size: 2.4vw;
+    transform: scale(1, 1.2);
+}
+
+.next {
+    color: #c81c1e;
+    font-size: 2.8vw;
+    transform: scale(1, .9);
+}
+
+.current {
+    background-image: url('bluebackground.jpg');
+    background-size: 30vw;
+    font-family: 'FreeSans', sans-serif;
+    color: #ffffff;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#videoElement {
+    position: fixed;
+    left: 7.5%;
+    top: 0%;
+    height: 95%;
+    z-index: -10;
+    visibility: hidden;
+    min-width: 100vw;
+    min-height: 95vh;
+}
+
+#mainImage {
+    min-width: 100vw;
+    min-height: 95vh;
+}
+
+#playButton {
+    background-color: #00000000;
+    color: white;
+    border: none;
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3vw 0 3vw 6vw;
+    border-color: transparent transparent transparent white;
+    cursor: pointer;
+    position: fixed;
+    top: 47%;
+    left: 57.5%;
+    transform: translate(-50%, -50%);
+}
+
+#playButton:hover {
+    border-color: transparent transparent transparent #aaaaaa;
+}
+
+.dark {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+    }
+}
+
+.loader {
+    color: #ff0000;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin: 0 0 2em;
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+    position: fixed;
+    top: 28%;
+    left: 0%;
+    z-index: 999;
+    display: none;
+}
