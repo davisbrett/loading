@@ -2,8 +2,10 @@ document.addEventListener('DOMContentLoaded', function () {
     preloadImages(imageUrls, function () {
         console.log("All images have been preloaded");
 
-        var playButton = document.getElementById('playButton');
         var audioPlayer = document.getElementById('audioPlayer');
+
+        var playButton = document.getElementById('playButton');
+        playButton.style.display = 'block';
 
         playButton.addEventListener('click', function () {
             if (audioPlayer.paused) {
@@ -14,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 playVideo();
             }
         });
+
+        hideLoader();
     });
 });
 
@@ -29,6 +33,11 @@ function preloadImages(urls, callback) {
         };
         img.src = url;
     });
+}
+
+function hideLoader() {
+    var loader = document.getElementById('loader');
+    loader.style.display = 'none';
 }
 
 const imageUrls = [

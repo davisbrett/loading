@@ -1,17 +1,44 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var playButton = document.getElementById('playButton');
-    var audioPlayer = document.getElementById('audioPlayer');
+    preloadImages(imageUrls, function () {
+        console.log("All images have been preloaded");
 
-    playButton.addEventListener('click', function () {
-        if (audioPlayer.paused) {
-            audioPlayer.play();
-            playButton.style.display = 'none';
+        var audioPlayer = document.getElementById('audioPlayer');
 
-            replaceImage(0);
-            playVideo();
-        }
+        var playButton = document.getElementById('playButton');
+        playButton.style.display = 'block';
+
+        playButton.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playButton.style.display = 'none';
+
+                replaceImage(0);
+                playVideo();
+            }
+        });
+
+        hideLoader();
     });
 });
+
+function preloadImages(urls, callback) {
+    var loaded = 0;
+    urls.forEach(function (url) {
+        var img = new Image();
+        img.onload = function () {
+            loaded++;
+            if (loaded === urls.length) {
+                callback();
+            }
+        };
+        img.src = url;
+    });
+}
+
+function hideLoader() {
+    var loader = document.getElementById('loader');
+    loader.style.display = 'none';
+}
 
 const imageUrls = [
     "tomorrownight/1.jpg",
