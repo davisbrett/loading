@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var playButton = document.getElementById('playButton');
+    playButton.style.display = 'none'; // Hide the play button initially
+
     preloadImages(imageUrls, function () {
         console.log("All images have been preloaded");
 
         var audioPlayer = document.getElementById('audioPlayer');
 
-        var playButton = document.getElementById('playButton');
-        playButton.style.display = 'block';
+        playButton.style.display = 'block'; // Display the play button after all images are preloaded
 
         playButton.addEventListener('click', function () {
             if (audioPlayer.paused) {
@@ -20,6 +22,20 @@ document.addEventListener('DOMContentLoaded', function () {
         hideLoader();
     });
 });
+
+function preloadImages(urls, callback) {
+    var loaded = 0;
+    urls.forEach(function (url) {
+        var img = new Image();
+        img.onload = function () {
+            loaded++;
+            if (loaded === urls.length) {
+                callback();
+            }
+        };
+        img.src = url;
+    });
+}
 
 function hideLoader() {
     var loader = document.getElementById('loader');

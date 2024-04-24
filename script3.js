@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
+    var playButton = document.getElementById('playButton');
+    playButton.style.display = 'none'; // Hide the play button initially
+
     preloadImages(imageUrls, function () {
         console.log("All images have been preloaded");
 
         var audioPlayer = document.getElementById('audioPlayer');
 
-        var playButton = document.getElementById('playButton');
-        playButton.style.display = 'block';
+        playButton.style.display = 'block'; // Display the play button after all images are preloaded
 
         playButton.addEventListener('click', function () {
             if (audioPlayer.paused) {
@@ -39,6 +41,7 @@ function hideLoader() {
     var loader = document.getElementById('loader');
     loader.style.display = 'none';
 }
+
 
 const imageUrls = [
     "diggs/1.jpg",
