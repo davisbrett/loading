@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const imageUrls = [
     "diggs/1.jpg",
-    "diggs/1.jpg",
     "diggs/2.jpg",
     "diggs/3.jpg",
     "diggs/4.jpg",
@@ -47,7 +46,6 @@ const imageUrls = [
     "diggs/30.jpg",
     "diggs/31.jpg",
     "diggs/1.jpg",
-    "diggs/1.jpg",
     "diggs/2.jpg",
     "diggs/3.jpg",
     "diggs/4.jpg",
@@ -75,7 +73,8 @@ const imageUrls = [
     "diggs/26.jpg",
     "diggs/27.jpg",
     "diggs/28.jpg",
-    "diggs/29.jpg"
+    "diggs/29.jpg",
+    "diggs/30.jpg"
 ];
 
 const imageDurations = [
