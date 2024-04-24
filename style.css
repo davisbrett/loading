@@ -247,12 +247,12 @@ p {
     height: 95%;
     z-index: -10;
     visibility: hidden;
-    min-width: 100vw;
+    min-width: 85vw;
     min-height: 95vh;
 }
 
 #mainImage {
-    min-width: 100vw;
+    min-width: 85vw;
     min-height: 95vh;
 }
 
